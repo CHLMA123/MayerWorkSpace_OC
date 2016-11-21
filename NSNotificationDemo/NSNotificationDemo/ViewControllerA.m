@@ -19,6 +19,7 @@
     // Do any additional setup after loading the view.
     self.title = @"ViewControllerA";
     self.view.backgroundColor = [UIColor colorWithRed:arc4random()%256/255.0 green:arc4random()%256/255.0 blue:arc4random()%256/255.0 alpha:1];
+    self.navigationItem.leftBarButtonItem = [self backBarButtonItem];
     
     UIButton *postnotifyBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     postnotifyBtn.frame = CGRectMake(50, 80, [UIScreen mainScreen].bounds.size.width - 100, 50);
@@ -32,6 +33,29 @@
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(triggerNotifyAction:) name:nil object:nil];
     //  UINavigationControllerWillShowViewControllerNotification +
     //  UIViewAnimationDidCommitNotification
+}
+
+- (UIBarButtonItem *)backBarButtonItem
+{
+    UIControl *backItem = [[UIControl alloc] initWithFrame:CGRectMake(0, 0, 44.f, 22.f)];
+    backItem.backgroundColor = [UIColor redColor];
+    [backItem addTarget:self action:@selector(backToParentView) forControlEvents:UIControlEventTouchUpInside];
+    UIImageView *backImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"topnav_return_nor.png"]];
+    [backImageView setContentMode:UIViewContentModeScaleAspectFit];
+    backImageView.frame = CGRectMake(0, (CGRectGetHeight(backItem.frame) - CGRectGetHeight(backImageView.frame)) * 0.5f, backImageView.image.size.width, backImageView.image.size.height);
+    [backItem addSubview:backImageView];
+    
+    return [[UIBarButtonItem alloc] initWithCustomView:backItem];
+}
+
+- (void)backToParentView{
+    
+    //当回到根页面时，才将此窗口dismiss
+    if ([self.navigationController presentingViewController] && self.navigationController.viewControllers.count == 1) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }else {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 - (void)triggerNotifyAction:(NSNotification *)notify{

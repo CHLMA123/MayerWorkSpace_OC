@@ -1,6 +1,13 @@
 # MayerWorkSpace_OC
 不积跬步无以至千里
 
+
+Run Loop本质是一个处理事件源的循环。我们对Run Loop的运行时具有控制权，我们可以在这个Loop中添加Input source或者Timer等各种事件源。Run Loop会在事件源发生时唤醒处于睡眠状态的线程执行任务, ，如果当前没有时间发生，Run Loop会让当前线程进入睡眠模式，来减轻CPU压力。Run Loop的事件源分为两大类:
+
+Timer Source
+Input Source perfermSelector系列方法，port-based Input Source和自定义的Input Source
+
+
 OSX/iOS 的系统架构：
 
 苹果官方将整个系统大致划分为上述4个层次：
@@ -21,10 +28,100 @@ Darwin 即操作系统的核心，包括系统内核、驱动、Shell 等内容�
 
 系统默认注册了5个Mode:
 1. kCFRunLoopDefaultMode: App的默认 Mode，通常主线程是在这个 Mode 下运行的。
-2. UITrackingRunLoopMode: 界面跟踪 Mode，用于 ScrollView 追踪触摸滑动，保证界面滑动时不受其他 Mode 影响。
+2. UITrackingRunLoopMode: 界面跟踪 Mode，用于 ScrollView 追踪触摸滑动，保证界面滑动时不受其他 Mode 影响。(NSTimer, NSURLConnection和NSStream默认运行在Default Mode下，UIScrollView在接收到用户交互事件时，主线程Run Loop会设置为UITrackingRunLoopMode下，这个时候NSTimer不能fire，NSURLConnection的数据也无法处理。)
 3. UIInitializationRunLoopMode: 在刚启动 App 时第进入的第一个 Mode，启动完成后就不再使用。
 4: GSEventReceiveRunLoopMode: 接受系统事件的内部 Mode，通常用不到。
 5: kCFRunLoopCommonModes: 这是一个占位的 Mode，没有实际作用。
+
+iOS下一些已经定义的Run Loop Modes:
+1) NSDefaultRunLoopMode: 大多数工作中默认的运行方式。
+2) NSConnectionReplyMode: 使用这个Mode去监听NSConnection对象的状态，我们很少需要自己使用这个Mode。
+3) NSModalPanelRunLoopMode: 使用这个Mode在Model Panel情况下去区分事件(OS X开发中会遇到)。
+4) UITrackingRunLoopMode: 使用这个Mode去跟踪来自用户交互的事件（比如UITableView上下滑动）。
+5) GSEventReceiveRunLoopMode: 用来接受系统事件，内部的Run Loop Mode。
+6) NSRunLoopCommonModes: 这是一个伪模式，其为一组run loop mode的集合。如果将Input source加入此模式，意味着关联Input source到Common Modes中包含的所有模式下。在iOS系统中NSRunLoopCommonMode包含NSDefaultRunLoopMode、NSTaskDeathCheckMode、UITrackingRunLoopMode.可使用CFRunLoopAddCommonMode方法向Common Modes中添加自定义mode。
+
+/**
+*  http://chun.tips/blog/2014/10/20/zou-jin-run-loopde-shi-jie-%5B%3F%5D-:shi-yao-shi-run-loop%3F/
+*/
+Run Loop从两个不同的事件源中接收消息:
+
+Input source用来投递异步消息，通常消息来自另外的线程或者程序。在接收到消息并调用程序指定方法时，线程中对应的NSRunLoop对象会通过执行runUntilDate:方法来退出。
+Timer source用来投递timer事件（Schedule或者Repeat）中的同步消息。在处理消息时，并不会退出Run Loop。
+Run Loop还有一个观察者Observer的概念，可以往Run Loop中加入自己的观察者以便监控Run Loop的运行过程。
+
+事件源
+
+    Input source有两个不同的种类: Port-Based Sources 和 Custom Input Sources。
+    Cocoa框架为我们定义了一些Custom Input Sources，允许我们在线程中执行一系列selector方法。
+
+        //在主线程的Run Loop下执行指定的 @selector 方法
+        performSelectorOnMainThread:withObject:waitUntilDone:
+        performSelectorOnMainThread:withObject:waitUntilDone:modes:
+
+        //在当前线程的Run Loop下执行指定的 @selector 方法
+        performSelector:onThread:withObject:waitUntilDone:
+        performSelector:onThread:withObject:waitUntilDone:modes:
+
+        //在当前线程的Run Loop下延迟加载指定的 @selector 方法
+        performSelector:withObject:afterDelay:
+        performSelector:withObject:afterDelay:inModes:
+
+        //取消当前线程的调用
+        cancelPreviousPerformRequestsWithTarget:
+        cancelPreviousPerformRequestsWithTarget:selector:object:
+
+    和Port-Based Sources一样，这些selector的请求会在目标线程中序列化，以减缓线程中多个方法执行带来的同步问题。
+    和Port-Based Sources不一样的是，一个selector方法执行完之后会自动从当前Run Loop中移除。
+
+
+Timer Sources
+
+    Timer source在预设的时间点同步的传递消息。Timer是线程通知自己做某件事的一种方式。
+
+    Foundation中 NSTimer Class提供了相关方法来设置Timer source。需要注意的是除了scheduledTimerWithTimeInterval开头的方法创建的Timer都需要手动添加到当前Run Loop中。（scheduledTimerWithTimeInterval 创建的timer会自动以Default Mode加载到当前Run Loop中。）
+
+    Timer在选择使用一次后，在执行完成时，会从Run Loop中移除。选择循环时，会一直保存在当前Run Loop中，直到调用invalidated方法。
+
+Run Loop Observers
+
+    事件源是同步或者异步的事件驱动时触发，而Run Loop Observer则在Run Loop本身进入某个状态时得到通知:
+
+        Run Loop 进入的时候
+        Run Loop 处理一个Timer的时候
+        Run Loop 处理一个Input Source的时候
+        Run Loop 进入睡眠的时候
+        Run Loop 被唤醒的时候，在唤醒它的事件被处理之前
+        Run Loop 停止的时候
+
+    Observer需要使用Core Foundataion框架。和Timer一样，Run Loop Observers也可以使用一次或者选择repeat。如果只使用一次，Observer会在它被执行后自己从Run Loop中移除。而循环的Observer会一直保存在Run Loop中。
+
+Run Loop 事件队列, 具体的顺序如下:
+
+    1) Run Loop进入的时候，会通知Observer
+    2) Timer即将被触发时，会通知Observer
+    3) 有其它非Port-Based Input Source即将被触发时，会通知Observer
+    4) 启动非Port-Based Input Source的事件源
+    5) 如果基于Port的Input Source事件源即将触发时，立即处理该事件，并跳转到9
+    6) 通知Observer当前线程进入睡眠状态
+    7) 将线程置入睡眠状态直到有以下事件发生：1. Port-Based Input Source被触发。2.Timer被触发。 3.Run Loop设置的时间已经超时。 4.Run Loop被显示唤醒。
+    8) 通知Observer线程将要被唤醒
+    9) 处理被触发的事件：1. 如果是用户自定义的Timer，处理Timer事件后重启Run Loop并直接进入步骤2。 2.如果线程被显示唤醒又没有超时，那么进入步骤2。 3.如果是其他Input Source事件源有事件发生，直接传递这个消息。
+    10) 通知Observer Run Loop结束，Run Loop退出。
+
+    基于非Timer的Input source事件被处理后，Run Loop在将要退出时发送通知。基于Timer source处理事件后不会退出Run Loop。
+
+一般可以通过这几张方式启动Run Loop：
+
+    无条件的 : 不推荐使用，这种方式启动Run Loop会让一个线程处于永久的循环中。退出Run Loop的唯一方式就是显示的去杀死它。 - (void)run;
+    设置超时时间 - (void)runUntilDate:(NSDate *)limitDate;
+    特定的Mode - (BOOL)runMode:(NSString *)mode beforeDate:(NSDate *)limitDate;
+
+退出Run Loop一般如下：
+
+    设置超时时间：推荐使用
+    通知Run Loop停止：使用CFRunLoopStop来显式的停止Run loop。无条件启动的Run Loop中调用这个方法退出Run Loop。
+
 
 
 NSRunLoop 学习笔记
@@ -94,9 +191,9 @@ Source/Timer/Observer 被称为 mode item，若 mode 中一个 item 也没有，
 
 5. 什么时候需要用到 RunLoop？
 
-    需要使用 Port 或者自定义 Input Source 与其他线程进行通信;
+    需要使用Port-Based Input Source或者Custom Input Source和其他线程通讯时;
     需要在线程中使用 NSTimer;（应用场景举例：主线程的 RunLoop 里有两个预置的 Mode：kCFRunLoopDefaultMode 和 UITrackingRunLoopMode。这两个 Mode 都已经被标记为"Common"属性。DefaultMode 是 App 平时所处的状态，TrackingRunLoopMode 是追踪 ScrollView 滑动时的状态。当你创建一个 Timer 并加到 DefaultMode 时，Timer 会得到重复回调，但此时滑动一个TableView时，RunLoop 会将 mode 切换为 TrackingRunLoopMode，这时 Timer 就不会被回调，并且也不会影响到滑动操作。在有 ScrollView 的界面，为了防止定时器失效，需要将定时器加入到 NSRunLoopCommonModes 中去。）
-    在子线程外部 performSelector:onThread: 方法到该线程。
+    在子线程外部 performSelector:onThread: 方法到该线程。(需要在线程中使用上文中提到的selector相关方法)
     使用子线程执行周期性的任务;(在子线程中持续处理定时器事件)
     NSURLConnection 在子线程发起异步请求调用;
 

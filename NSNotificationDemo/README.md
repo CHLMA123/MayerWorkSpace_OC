@@ -3,16 +3,6 @@
 
 #pragma mark - NSNotificationDemo
 
-通常我们在 iOS 中发生什么事件时该做什么是由 Delegate 实现的，例如 View 加载完后会触发 viewDidLoad。Apple 还为我们提供了另一种通知响应方式，那就是 NSNotification，系统中(UIKeyboardDidShowNotification 等) 以及某些第三方组件(例如 ASIHTTPRequest 的 kReachabilityChangedNotification 等)。  
-
-NSNotificationCenter 较之于 Delegate 可以实现更大的跨度的通信机制，可以为两个无引用关系的两个对象进行通信。NSNotificationCenter 的通信原理使用了观察者模式：
-
-1. NSNotificationCenter 注册观察者对某个事件(以字符串命名)感兴趣，及该事件触发时该执行的 Selector 或 Block
-2. NSNotificationCenter 在某个时机激发事件(以字符串命名)
-3. 观察者在收到感兴趣的事件时，执行相应的 Selector 或 Block
-
-
-
 Notification的总结 :
 
 1 对象之间通信的标准方式是发送消息，一个object直接调用另一个object的方法。前提是你需要知道两个对象及要发送的消息的内容。而且这样子耦合度太高，绑定了两个本来是独立的object。
