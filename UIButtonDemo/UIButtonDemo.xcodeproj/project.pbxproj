@@ -18,6 +18,11 @@
 		361C98ED1DE2C0FA00C98A3F /* UIButton+Touch.m in Sources */ = {isa = PBXBuildFile; fileRef = 361C98EC1DE2C0FA00C98A3F /* UIButton+Touch.m */; };
 		361C98EF1DE2C11A00C98A3F /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 361C98EE1DE2C11A00C98A3F /* README.md */; };
 		361C98F21DE2C4A900C98A3F /* UIButton+Delay.m in Sources */ = {isa = PBXBuildFile; fileRef = 361C98F11DE2C4A900C98A3F /* UIButton+Delay.m */; };
+		3624C2DA1DE43C89005892D2 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 3624C2D91DE43C89005892D2 /* README.md */; };
+		3624C2DD1DE44188005892D2 /* NSInvocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3624C2DC1DE44188005892D2 /* NSInvocationController.m */; };
+		368264D11DE3DC77001E5404 /* OBJC_ASSOCIATIONController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368264D01DE3DC77001E5404 /* OBJC_ASSOCIATIONController.m */; };
+		368264D51DE3DF68001E5404 /* BlockUsageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368264D41DE3DF68001E5404 /* BlockUsageController.m */; };
+		368264D81DE3E570001E5404 /* BlockTypeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368264D71DE3E570001E5404 /* BlockTypeController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +44,15 @@
 		361C98EE1DE2C11A00C98A3F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		361C98F01DE2C4A900C98A3F /* UIButton+Delay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Delay.h"; sourceTree = "<group>"; };
 		361C98F11DE2C4A900C98A3F /* UIButton+Delay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Delay.m"; sourceTree = "<group>"; };
+		3624C2D91DE43C89005892D2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3624C2DB1DE44188005892D2 /* NSInvocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSInvocationController.h; sourceTree = "<group>"; };
+		3624C2DC1DE44188005892D2 /* NSInvocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSInvocationController.m; sourceTree = "<group>"; };
+		368264CF1DE3DC77001E5404 /* OBJC_ASSOCIATIONController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBJC_ASSOCIATIONController.h; sourceTree = "<group>"; };
+		368264D01DE3DC77001E5404 /* OBJC_ASSOCIATIONController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBJC_ASSOCIATIONController.m; sourceTree = "<group>"; };
+		368264D31DE3DF68001E5404 /* BlockUsageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockUsageController.h; sourceTree = "<group>"; };
+		368264D41DE3DF68001E5404 /* BlockUsageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockUsageController.m; sourceTree = "<group>"; };
+		368264D61DE3E570001E5404 /* BlockTypeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockTypeController.h; sourceTree = "<group>"; };
+		368264D71DE3E570001E5404 /* BlockTypeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockTypeController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +85,8 @@
 		361C98C41DE2890600C98A3F /* UIButtonDemo */ = {
 			isa = PBXGroup;
 			children = (
+				368264D21DE3DF3F001E5404 /* BlockUsage */,
+				368264CE1DE3DC5E001E5404 /* 关联传值 */,
 				361C98EA1DE2C0FA00C98A3F /* UIButton-Touch */,
 				361C98DF1DE28AC600C98A3F /* BlockButton */,
 				361C98C81DE2890600C98A3F /* AppDelegate.h */,
@@ -90,6 +106,9 @@
 		361C98C51DE2890600C98A3F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3624C2DB1DE44188005892D2 /* NSInvocationController.h */,
+				3624C2DC1DE44188005892D2 /* NSInvocationController.m */,
+				3624C2D91DE43C89005892D2 /* README.md */,
 				361C98C61DE2890600C98A3F /* main.m */,
 			);
 			name = "Supporting Files";
@@ -114,6 +133,26 @@
 				361C98EE1DE2C11A00C98A3F /* README.md */,
 			);
 			path = "UIButton-Touch";
+			sourceTree = "<group>";
+		};
+		368264CE1DE3DC5E001E5404 /* 关联传值 */ = {
+			isa = PBXGroup;
+			children = (
+				368264CF1DE3DC77001E5404 /* OBJC_ASSOCIATIONController.h */,
+				368264D01DE3DC77001E5404 /* OBJC_ASSOCIATIONController.m */,
+			);
+			path = "关联传值";
+			sourceTree = "<group>";
+		};
+		368264D21DE3DF3F001E5404 /* BlockUsage */ = {
+			isa = PBXGroup;
+			children = (
+				368264D61DE3E570001E5404 /* BlockTypeController.h */,
+				368264D71DE3E570001E5404 /* BlockTypeController.m */,
+				368264D31DE3DF68001E5404 /* BlockUsageController.h */,
+				368264D41DE3DF68001E5404 /* BlockUsageController.m */,
+			);
+			path = BlockUsage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,10 +230,15 @@
 				361C98D31DE2890600C98A3F /* UIButtonDemo.xcdatamodeld in Sources */,
 				361C98CD1DE2890600C98A3F /* ViewController.m in Sources */,
 				361C98CA1DE2890600C98A3F /* AppDelegate.m in Sources */,
+				3624C2DD1DE44188005892D2 /* NSInvocationController.m in Sources */,
 				361C98EF1DE2C11A00C98A3F /* README.md in Sources */,
 				361C98ED1DE2C0FA00C98A3F /* UIButton+Touch.m in Sources */,
+				368264D11DE3DC77001E5404 /* OBJC_ASSOCIATIONController.m in Sources */,
+				3624C2DA1DE43C89005892D2 /* README.md in Sources */,
+				368264D51DE3DF68001E5404 /* BlockUsageController.m in Sources */,
 				361C98C71DE2890600C98A3F /* main.m in Sources */,
 				361C98E51DE28AFF00C98A3F /* BlockButton.m in Sources */,
+				368264D81DE3E570001E5404 /* BlockTypeController.m in Sources */,
 				361C98F21DE2C4A900C98A3F /* UIButton+Delay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,6 +398,7 @@
 				361C98DE1DE2890600C98A3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
