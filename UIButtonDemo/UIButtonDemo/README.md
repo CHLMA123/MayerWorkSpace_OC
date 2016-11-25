@@ -29,7 +29,7 @@ objc_setAssociatedObject需要四个参数：源对象，关键字，关联的�
 block内存中的三个位置 NSGlobalBlock，NSStackBlock, NSMallocBlock
 
 NSGlobalBlock : 和函数类似，位于text代码段
-NSStackBlock : 栈内存,函数返回后Block将无效
+NSStackBlock  : 栈内存,函数返回后Block将无效
 NSMallocBlock : 堆内存
 
 /**

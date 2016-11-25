@@ -1,11 +1,18 @@
 # MayerWorkSpace_OC
 不积跬步无以至千里
 
-UINavigationController：同级页面之间的跳转，界面典型的特点就是页面上部有一UINavigationBar导航条，导航条可以设置标题、左上角的按钮（一般用于返回），右上角的按钮，也可以自定义这些元素。
+# 理解iPhone高清分辨率的问题可以有两个关键切入点：
+1.像素坐标普通屏是480*320，Retina屏是960*640,而逻辑坐标系同为480*320；
+2.Retina屏幕一个逻辑坐标点坐标包含4个像素，而普通屏幕一个逻辑点的坐标只包含1个像素。
+于是可以理解的是，对于同一张图，像素数目是固定的，在Retina屏幕上，肯定比在普通屏幕上在逻辑坐标尺寸上要小2倍。
+举例来说：一张图片像素尺寸为100*100，在Retina屏幕上逻辑坐标只有50*50，因为虽然逻辑尺寸50*50，但实际像素尺寸依然是100*100，这也就是为什么高清屏幕显示图片更细腻和更清楚的原因，因为在同样逻辑尺寸的屏幕上，单位尺寸像素的密度更高，于是就更好看。
+还有一个问题是，在Mac上的iOS设备模拟器为什么在Retina时要变得更大，这个原因我想是因为Mac的屏幕不是Retina屏幕，所以没办法在不改变模拟器屏幕尺寸的情况下直接模拟Retina iOS设备的效果，即模拟器上的屏幕和Mac上像素点是一一对应的，所以为了模拟iOS设备Retina屏幕（像素点是以前的4倍），只能将模拟器的屏幕变大。
 
-UITabBarController：父子页面之间的嵌套关系，界面典型的特点是耍耍下部有一UITabBar选项组，通过点击Tab，可切换上面的视图的变换。
+# UINavigationController：同级页面之间的跳转，界面典型的特点就是页面上部有一UINavigationBar导航条，导航条可以设置标题、左上角的按钮（一般用于返回），右上角的按钮，也可以自定义这些元素。
 
-UIViewController、UINavigationController、UITabBarController三者的整合使用，可以开发出大部分的App应用页面框架。
+# UITabBarController：父子页面之间的嵌套关系，界面典型的特点是耍耍下部有一UITabBar选项组，通过点击Tab，可切换上面的视图的变换。
+
+# UIViewController、UINavigationController、UITabBarController三者的整合使用，可以开发出大部分的App应用页面框架。
 
 
 1、AsyncDisplayKit

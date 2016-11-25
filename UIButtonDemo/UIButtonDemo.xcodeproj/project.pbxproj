@@ -20,6 +20,7 @@
 		361C98F21DE2C4A900C98A3F /* UIButton+Delay.m in Sources */ = {isa = PBXBuildFile; fileRef = 361C98F11DE2C4A900C98A3F /* UIButton+Delay.m */; };
 		3624C2DA1DE43C89005892D2 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 3624C2D91DE43C89005892D2 /* README.md */; };
 		3624C2DD1DE44188005892D2 /* NSInvocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3624C2DC1DE44188005892D2 /* NSInvocationController.m */; };
+		365D9C841DE7D49700533A74 /* BlockTest.md in Sources */ = {isa = PBXBuildFile; fileRef = 365D9C831DE7D49700533A74 /* BlockTest.md */; };
 		368264D11DE3DC77001E5404 /* OBJC_ASSOCIATIONController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368264D01DE3DC77001E5404 /* OBJC_ASSOCIATIONController.m */; };
 		368264D51DE3DF68001E5404 /* BlockUsageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368264D41DE3DF68001E5404 /* BlockUsageController.m */; };
 		368264D81DE3E570001E5404 /* BlockTypeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368264D71DE3E570001E5404 /* BlockTypeController.m */; };
@@ -47,6 +48,7 @@
 		3624C2D91DE43C89005892D2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3624C2DB1DE44188005892D2 /* NSInvocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSInvocationController.h; sourceTree = "<group>"; };
 		3624C2DC1DE44188005892D2 /* NSInvocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSInvocationController.m; sourceTree = "<group>"; };
+		365D9C831DE7D49700533A74 /* BlockTest.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = BlockTest.md; sourceTree = "<group>"; };
 		368264CF1DE3DC77001E5404 /* OBJC_ASSOCIATIONController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBJC_ASSOCIATIONController.h; sourceTree = "<group>"; };
 		368264D01DE3DC77001E5404 /* OBJC_ASSOCIATIONController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBJC_ASSOCIATIONController.m; sourceTree = "<group>"; };
 		368264D31DE3DF68001E5404 /* BlockUsageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockUsageController.h; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 		368264D21DE3DF3F001E5404 /* BlockUsage */ = {
 			isa = PBXGroup;
 			children = (
+				365D9C831DE7D49700533A74 /* BlockTest.md */,
 				368264D61DE3E570001E5404 /* BlockTypeController.h */,
 				368264D71DE3E570001E5404 /* BlockTypeController.m */,
 				368264D31DE3DF68001E5404 /* BlockUsageController.h */,
@@ -229,6 +232,7 @@
 			files = (
 				361C98D31DE2890600C98A3F /* UIButtonDemo.xcdatamodeld in Sources */,
 				361C98CD1DE2890600C98A3F /* ViewController.m in Sources */,
+				365D9C841DE7D49700533A74 /* BlockTest.md in Sources */,
 				361C98CA1DE2890600C98A3F /* AppDelegate.m in Sources */,
 				3624C2DD1DE44188005892D2 /* NSInvocationController.m in Sources */,
 				361C98EF1DE2C11A00C98A3F /* README.md in Sources */,
