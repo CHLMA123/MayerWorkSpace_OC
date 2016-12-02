@@ -16,6 +16,8 @@
 		360676E91DF168250051D7B8 /* FSUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 360676E81DF168250051D7B8 /* FSUIKit.m */; };
 		360676EC1DF17D0A0051D7B8 /* LayoutButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 360676EB1DF17D0A0051D7B8 /* LayoutButton.m */; };
 		360676EE1DF17E2C0051D7B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 360676ED1DF17E2C0051D7B8 /* Assets.xcassets */; };
+		360DA0E61DF1B7AB008214E9 /* MCLUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 360DA0E51DF1B7AB008214E9 /* MCLUIKit.m */; };
+		360DA0E91DF1B8CE008214E9 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 360DA0E81DF1B8CE008214E9 /* UIView+Layout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,10 @@
 		360676EA1DF17D0A0051D7B8 /* LayoutButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutButton.h; sourceTree = "<group>"; };
 		360676EB1DF17D0A0051D7B8 /* LayoutButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayoutButton.m; sourceTree = "<group>"; };
 		360676ED1DF17E2C0051D7B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		360DA0E41DF1B7AB008214E9 /* MCLUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCLUIKit.h; sourceTree = "<group>"; };
+		360DA0E51DF1B7AB008214E9 /* MCLUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCLUIKit.m; sourceTree = "<group>"; };
+		360DA0E71DF1B8CE008214E9 /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
+		360DA0E81DF1B8CE008214E9 /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,10 @@
 				360676E81DF168250051D7B8 /* FSUIKit.m */,
 				360676EA1DF17D0A0051D7B8 /* LayoutButton.h */,
 				360676EB1DF17D0A0051D7B8 /* LayoutButton.m */,
+				360DA0E41DF1B7AB008214E9 /* MCLUIKit.h */,
+				360DA0E51DF1B7AB008214E9 /* MCLUIKit.m */,
+				360DA0E71DF1B8CE008214E9 /* UIView+Layout.h */,
+				360DA0E81DF1B8CE008214E9 /* UIView+Layout.m */,
 			);
 			path = WidgetManagerDemo;
 			sourceTree = "<group>";
@@ -168,8 +178,10 @@
 				360676EC1DF17D0A0051D7B8 /* LayoutButton.m in Sources */,
 				360676E91DF168250051D7B8 /* FSUIKit.m in Sources */,
 				360676D21DF167E50051D7B8 /* AppDelegate.m in Sources */,
+				360DA0E91DF1B8CE008214E9 /* UIView+Layout.m in Sources */,
 				360676DB1DF167E50051D7B8 /* WidgetManagerDemo.xcdatamodeld in Sources */,
 				360676CF1DF167E50051D7B8 /* main.m in Sources */,
+				360DA0E61DF1B7AB008214E9 /* MCLUIKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +338,7 @@
 				360676E61DF167E50051D7B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -10,6 +10,8 @@
 #import "FSUIKit.h"
 #import "LayoutButton.h"
 
+#import "UIView+Layout.h"
+
 @interface ViewController ()
 
 @end
@@ -54,8 +56,10 @@
 
     
     
+    UILabel *lable = [[UILabel alloc] init];
+    lable.mcl_Frame(CGRectMake(50, 70, 200, 50)).mcl_BackgroundColor([UIColor redColor]).mcl_Text(@"xiaoming");
     
-    
+    self.view.add(lable);
     
     
     
