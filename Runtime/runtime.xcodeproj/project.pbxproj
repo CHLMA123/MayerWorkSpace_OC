@@ -27,6 +27,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		368D37931DF1104600DDEBF6 /* 消息转发模型.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "消息转发模型.png"; sourceTree = "<group>"; };
 		9BE0B5CD1C37B14800C33764 /* runtime */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = runtime; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BE0B5D01C37B14800C33764 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9BE0B5D71C37B1C000C33764 /* MethodForwardTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MethodForwardTest.h; sourceTree = "<group>"; };
@@ -69,6 +70,7 @@
 		9BE0B5CF1C37B14800C33764 /* runtime */ = {
 			isa = PBXGroup;
 			children = (
+				368D37931DF1104600DDEBF6 /* 消息转发模型.png */,
 				9BE0B5D01C37B14800C33764 /* main.m */,
 				9BE0B5DD1C37BBF000C33764 /* MethodSwizzlingTest.h */,
 				9BE0B5DE1C37BBF000C33764 /* MethodSwizzlingTest.m */,

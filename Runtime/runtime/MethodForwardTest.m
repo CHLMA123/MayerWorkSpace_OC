@@ -2,8 +2,8 @@
 //  MyTest.m
 //  runtime
 //
-//  Created by 张星宇 on 16/1/2.
-//  Copyright © 2016年 张星宇. All rights reserved.
+//  Created by  on 16/1/2.
+//  Copyright © 2016年  . All rights reserved.
 //
 
 #import "MethodForwardTest.h"
@@ -35,7 +35,7 @@
 //}
 
 /**
- *  第二次机会，方法转发
+ *  第二次机会，方法转发(快速消息转发的实现方法很简单，只需要重写 - (id)forwardingTargetForSelector:(SEL)aSelector  方法即可。)
  *
  *  @param sel 需要处理的方法
  *
@@ -44,9 +44,10 @@
 //- (id)forwardingTargetForSelector:(SEL)aSelector {
 //    return [[Replacement alloc] init];
 //}
-
+//http://blog.csdn.net/yiyaaixuexi/article/details/8970734
 /**
- *  第三次机会，完整的方法转发
+ *  第三次机会，完整的方法转发(标准消息转发需要重写 methodSignatureForSelector: 和 forwardInvocation: 两个方法即可。
+ 发流程如图所示：)
  */
 - (void)anotherTest {
     NSLog(@"另一个test方法");
