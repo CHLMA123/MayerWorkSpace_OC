@@ -10,7 +10,14 @@
 
 @implementation LayoutButton
 
+/**
+    重写以下两个方法，实现button中文字与图片的布局
+    - (CGRect)titleRectForContentRect:(CGRect)contentRect;
+    - (CGRect)imageRectForContentRect:(CGRect)contentRect;
+ */
+
 - (CGRect)titleRectForContentRect:(CGRect)contentRect{
+    
     if (!CGRectIsEmpty(self.titleRect) && !CGRectEqualToRect(self.titleRect, CGRectZero)) {
         return self.titleRect;
     }

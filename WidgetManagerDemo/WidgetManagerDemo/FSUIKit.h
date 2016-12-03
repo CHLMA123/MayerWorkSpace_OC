@@ -11,7 +11,7 @@
 
 @interface FSUIKit : NSObject
 
-#pragma mark - UILable
+#pragma mark --------- UILabel --------
 
 /** Lable 文字 字号*/
 + (UILabel *)lableText:(NSString *)text
@@ -36,11 +36,46 @@
        backgroundColor:(UIColor *)backgroundColor;
 
 //+ (void)make:(id)first,...NS_REQUIRES_NIL_TERMINATION;
-#pragma mark - UIImageView
+#pragma mark --------- UIImageView --------
 
-//+ (UIImageView *)
+/** ImageView 图片 */
++ (UIImageView *)imageViewWithImage:(UIImage *)image;
 
+/** ImageView 图片 交互 */
++ (UIImageView *)imageViewWithImage:(UIImage *)image
+             userInteractionEnabled:(BOOL)enabled;
 
+/** ImageView 填充方式 图片 */
++ (UIImageView *)imageViewWithContentMode:(UIViewContentMode)mode
+                                    image:(UIImage *)image;
+
+/** ImageView 填充方式 交互 图片 */
++ (UIImageView *)imageViewWithContentMode:(UIViewContentMode)mode
+                   userInteractionEnabled:(BOOL)enabled
+                                    image:(UIImage *)image;
+#pragma mark --------- UIButton --------
+
+/** UIButton 前景图 */
++ (UIButton *)buttonWithImage:(UIImage *)image;
+
+/** UIButton 背景色 标题色 标题 字号 */
++ (UIButton *)buttonWithBackgroundColor:(UIColor *)backgroundColor
+                             titleColor:(UIColor *)titleColor
+                                  title:(NSString *)title
+                               fontSize:(CGFloat)size;
+
+/** UIButton 背景色 标题色 标题高亮色 标题 字号 */
++ (UIButton *)buttonWithBackgroundColor:(UIColor *)backgroundColor
+                             titleColor:(UIColor *)titleColor
+                    titleHighlightColor:(UIColor *)titleHighlightColor
+                                  title:(NSString *)title
+                               fontSize:(CGFloat)size;
+
+#pragma mark --------- TableView --------
+
++ (UITableView *)tableViewWithFrame:(CGRect)frame
+                              style:(UITableViewStyle)style
+                           delegate:(id)delegate;
 
 
 @end
