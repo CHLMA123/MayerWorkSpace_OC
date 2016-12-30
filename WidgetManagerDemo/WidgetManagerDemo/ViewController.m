@@ -19,6 +19,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    
+    
+    
+    
+    
+    
     UILabel *title = [FSUIKit lableText:@"123" fontSize:14 textColor:[UIColor redColor] numberOfLines:1 textAlignment:NSTextAlignmentLeft backgroundColor:[UIColor blackColor]];
     
 
