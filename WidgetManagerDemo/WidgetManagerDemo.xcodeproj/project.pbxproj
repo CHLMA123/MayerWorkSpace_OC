@@ -16,73 +16,6 @@
 		360676E91DF168250051D7B8 /* FSUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 360676E81DF168250051D7B8 /* FSUIKit.m */; };
 		360676EC1DF17D0A0051D7B8 /* LayoutButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 360676EB1DF17D0A0051D7B8 /* LayoutButton.m */; };
 		360676EE1DF17E2C0051D7B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 360676ED1DF17E2C0051D7B8 /* Assets.xcassets */; };
-<<<<<<< HEAD
-		360DA0E61DF1B7AB008214E9 /* MCLUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 360DA0E51DF1B7AB008214E9 /* MCLUIKit.m */; };
-		360DA0E91DF1B8CE008214E9 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 360DA0E81DF1B8CE008214E9 /* UIView+Layout.m */; };
-=======
-		36BB2E401E124E3E00EC87AC /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36BB2E3F1E124E3E00EC87AC /* NotificationCenter.framework */; };
-		36BB2E441E124E3E00EC87AC /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BB2E431E124E3E00EC87AC /* TodayViewController.m */; };
-		36BB2E471E124E3E00EC87AC /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36BB2E451E124E3E00EC87AC /* MainInterface.storyboard */; };
-		36BB2E4B1E124E3E00EC87AC /* ShareWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 36BB2E3D1E124E3E00EC87AC /* ShareWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
->>>>>>> origin/master
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		36BB2E491E124E3E00EC87AC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 360676C21DF167E40051D7B8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 36BB2E3C1E124E3E00EC87AC;
-			remoteInfo = ShareWidget;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		36BB2E4F1E124E3E00EC87AC /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				36BB2E4B1E124E3E00EC87AC /* ShareWidget.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
-/* Begin PBXFileReference section */
-		360676CA1DF167E50051D7B8 /* WidgetManagerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WidgetManagerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		360676CE1DF167E50051D7B8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		360676D01DF167E50051D7B8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		360676D11DF167E50051D7B8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		360676D31DF167E50051D7B8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		360676D41DF167E50051D7B8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		360676D71DF167E50051D7B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		360676DA1DF167E50051D7B8 /* WidgetManagerDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WidgetManagerDemo.xcdatamodel; sourceTree = "<group>"; };
-		360676DF1DF167E50051D7B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		360676E11DF167E50051D7B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		360676E71DF168250051D7B8 /* FSUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSUIKit.h; sourceTree = "<group>"; };
-		360676E81DF168250051D7B8 /* FSUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSUIKit.m; sourceTree = "<group>"; };
-		360676EA1DF17D0A0051D7B8 /* LayoutButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutButton.h; sourceTree = "<group>"; };
-		360676EB1DF17D0A0051D7B8 /* LayoutButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayoutButton.m; sourceTree = "<group>"; };
-		360676ED1DF17E2C0051D7B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-<<<<<<< HEAD
-		360DA0E41DF1B7AB008214E9 /* MCLUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCLUIKit.h; sourceTree = "<group>"; };
-		360DA0E51DF1B7AB008214E9 /* MCLUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCLUIKit.m; sourceTree = "<group>"; };
-		360DA0E71DF1B8CE008214E9 /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
-		360DA0E81DF1B8CE008214E9 /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
-=======
-		36BB2E3D1E124E3E00EC87AC /* ShareWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShareWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		36BB2E3F1E124E3E00EC87AC /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
-		36BB2E421E124E3E00EC87AC /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
-		36BB2E431E124E3E00EC87AC /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
-		36BB2E461E124E3E00EC87AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
-		36BB2E481E124E3E00EC87AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		36BB2E501E1253B600EC87AC /* ShareWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareWidget.entitlements; sourceTree = "<group>"; };
->>>>>>> origin/master
-/* End PBXFileReference section */
-
 /* Begin PBXFrameworksBuildPhase section */
 		360676C71DF167E50051D7B8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -503,17 +436,6 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
-<<<<<<< HEAD
-=======
-		};
-		36BB2E4E1E124E3E00EC87AC /* Build configuration list for PBXNativeTarget "ShareWidget" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				36BB2E4C1E124E3E00EC87AC /* Debug */,
-				36BB2E4D1E124E3E00EC87AC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
->>>>>>> origin/master
 		};
 /* End XCConfigurationList section */
 
