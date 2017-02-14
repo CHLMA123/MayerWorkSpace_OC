@@ -40,7 +40,7 @@
                                    
                                    //2 Model对象的存储
                                    NSString *documentpath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-                                   NSString *filepath = [documentpath stringByAppendingPathComponent:@"NSKeyedArchiver.txt"];
+                                   NSString *filepath = [documentpath stringByAppendingPathComponent:@"NSKeyedArchiver.archiver"];
                                    NSLog(@"filepath = %@",filepath);
                                    [NSKeyedArchiver archiveRootObject:stuffmodel toFile:filepath];
                                    GoodStuffDataModel *model2 = [NSKeyedUnarchiver unarchiveObjectWithFile:filepath];

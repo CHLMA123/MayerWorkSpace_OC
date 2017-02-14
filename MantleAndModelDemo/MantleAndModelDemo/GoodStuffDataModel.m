@@ -32,23 +32,21 @@
 
 //第一种是实现协议中的下面这个方法。
 //Implement this optional method to convert a property from a different type when deserializing from JSON.(这种方式有个坏处，代码会很容易膨胀，if-else-if会很多，比较难维护。)
-+(NSValueTransformer *)JSONTransformerForKey:(NSString *)key{
-
-    //key is the key that applies to your model object; not the original JSON key.
-    return [MTLValueTransformer transformerUsingReversibleBlock:^id(id value, BOOL *success, NSError *__autoreleasing *error) {
-        
-        if ([key isEqualToString:@"stuff_des"]) {
-            
-            return [NSValueTransformer valueTransformerForName:];
-            
-        }else if ([key isEqualToString:@"stuff_titles"]) {
-        
-        }
-        
-        return nil;
-        
-    }];
-}
+//+(NSValueTransformer *)JSONTransformerForKey:(NSString *)key{
+//
+//    //key is the key that applies to your model object; not the original JSON key.
+//    return [MTLValueTransformer transformerUsingReversibleBlock:^id(id value, BOOL *success, NSError *__autoreleasing *error) {
+//        
+//        if ([key isEqualToString:@"stuff_des"]) {
+//            
+////            return [NSValueTransformer valueTransformerForName:];
+//            
+//        }else if ([key isEqualToString:@"stuff_titles"]) {
+//        
+//        }
+//        
+//    }];
+//}
 
 //第二种方式的基本思路就是把第一种方式的if-else-if拆开，独立成一个个的小方法，便于维护。它的方法名必须遵循特定的规则，规则如下：SEL selector = MTLSelectorWithKeyPattern(key, "JSONTransformer");
 
