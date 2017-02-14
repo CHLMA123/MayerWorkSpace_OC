@@ -34,7 +34,7 @@
 @property (nonatomic , strong)IBOutlet  NSTextField  * jsonField;
 @property (nonatomic , strong)IBOutlet  NSTextField  * classField;
 @property (nonatomic , strong)IBOutlet  NSTextField  * classMField;
-@property (nonatomic , strong)IBOutlet  NSButton       * checkBox;
+@property (nonatomic , strong)IBOutlet  NSButton     * checkBox;
 @end
 
 @implementation ViewController
