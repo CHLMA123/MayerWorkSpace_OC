@@ -36,19 +36,19 @@
                                    NSDictionary *dictlist = array[0];
                                    //1 将JSON数据和Model的属性进行绑定
                                    GoodStuffDataModel *stuffmodel = [MTLJSONAdapter modelOfClass:[GoodStuffDataModel class] fromJSONDictionary:dictlist error:nil];
-                                   NSLog(@"model = %@",stuffmodel);
+                                   NSLog(@"\n\n\nmodel = %@",stuffmodel);
                                    
                                    //2 Model对象的存储
                                    NSString *documentpath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
                                    NSString *filepath = [documentpath stringByAppendingPathComponent:@"NSKeyedArchiver.archiver"];
-                                   NSLog(@"filepath = %@",filepath);
+                                   NSLog(@"\n\n\nfilepath = %@\n\n\n",filepath);
                                    [NSKeyedArchiver archiveRootObject:stuffmodel toFile:filepath];
                                    GoodStuffDataModel *model2 = [NSKeyedUnarchiver unarchiveObjectWithFile:filepath];
-                                   NSLog(@"model2 = %@, stuff_titles = %@",model2, model2.stuff_titles);
+                                   NSLog(@"\n\n\nmodel2 = %@, stuff_titles = %@\n\n\n",model2, model2.stuff_titles);
                                    
                                    //3 Model Object转换为json格式，需要调用:
                                    NSDictionary *jsonDictionary = [MTLJSONAdapter JSONDictionaryFromModel:stuffmodel error:nil];
-                                   NSLog(@"jsonDictionary = %@",jsonDictionary.description);
+                                   NSLog(@"\n\n\njsonDictionary = %@\n\n\n",jsonDictionary.description);
                                    
                                    
                                }
