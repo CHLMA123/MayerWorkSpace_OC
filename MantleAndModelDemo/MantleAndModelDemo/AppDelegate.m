@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "GoodStuffDataModel.h"
 
 @interface AppDelegate ()
 
@@ -17,7 +18,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    //Xtrace相关配置项
+    [Xtrace describeValues:NO];
     [Xtrace showCaller:YES];
+    [Xtrace showActual:YES];
+    [Xtrace showArguments:YES];
+    [Xtrace showReturns:NO];
+    [GoodStuffDataModel xtrace];
+    [MTLJSONAdapter xtrace];
     return YES;
 }
 

@@ -70,6 +70,7 @@
 //}
 
 //第二种方式的基本思路就是把第一种方式的if-else-if拆开，独立成一个个的小方法，便于维护。它的方法名必须遵循特定的规则，规则如下：SEL selector = MTLSelectorWithKeyPattern(key, "JSONTransformer");
+//实现”属性名称”+”JSONTransformer”方法
 + (NSValueTransformer *)dateJSONTransformer
 {
     return [MTLValueTransformer reversibleTransformerWithForwardBlock:

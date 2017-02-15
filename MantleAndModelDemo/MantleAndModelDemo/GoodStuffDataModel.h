@@ -7,7 +7,7 @@
 //
 
 #import "MTLModel.h"
-#import "Mantle.h"
+
 
 @interface GoodStuffDataModel : MTLModel<MTLJSONSerializing>
 
