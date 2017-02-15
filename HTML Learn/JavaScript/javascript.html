@@ -1,0 +1,47 @@
+<!DOCTYPE html><!...javascript 最主流的应用还是在Web上——创建动态网页(即网页特效)...>
+<html>
+<head>
+	<title>JavaScript文档</title>
+	<meta charset="utf-8">
+	<!-- <script type="text/javascript" language="javascript">
+		// JS代码块 直接嵌入式
+		{
+			document.write("专注于Web开发");
+			document.write("<p>This is a paragraph</p>");
+		}
+	</script> -->
+	<!-- <script src="untitled.js">
+		//文件调用式
+	</script>
+	<script type="text/javascript">
+		{
+			alert("网络错误");
+		}
+	</script> -->
+	<script type="text/javascript">//双引号被当作javascript标记字符串开始和结束的符号
+		{
+			function message() {
+				// body...
+				confirm("123456");
+			}
+			function message2() {
+				// body...
+				alert("轻轻的你走了，不带走一片云彩。");
+			}
+			function message3(){
+				alert("您触发了该事件");
+			};
+		}
+	</script>
+</head>
+<body>
+	<!-- <b onmouseover="message()">AW站长网，专注于Web开发</b> -->
+	<!-- <form>
+		<a href="http://www.adminwang.com" onmouseover="" ="message2()">AW站长网</a>
+	</form> -->
+	<form>
+		个人简介<br>
+		<textarea name="summary" cols="60" rows="5" onselect="message()">请写入个人简介，不少于200字。</textarea>
+	</form>
+</body>
+</html>
