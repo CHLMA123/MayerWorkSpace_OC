@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E67AAB9C826ACF62BD0DD7B8B9CFBC7532823B32",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E67AAB9C826ACF62BD0DD7B8B9CFBC7532823B32" : 9223372036854775807,
+    "AF39A43388073A4DE5B0044898CFE41D4613B7B4" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "150C0E0E-FD9C-4E25-B085-0B9C1763D519",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E67AAB9C826ACF62BD0DD7B8B9CFBC7532823B32" : "mvvmDemo\/",
+    "AF39A43388073A4DE5B0044898CFE41D4613B7B4" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "mvvmDemo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "mvvmDemo.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/CHLMA123\/MayerWorkSpace_OC.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AF39A43388073A4DE5B0044898CFE41D4613B7B4"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/zhangjiahuan8888\/mvvmDemo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E67AAB9C826ACF62BD0DD7B8B9CFBC7532823B32"
+    }
+  ]
+}
