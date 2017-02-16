@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		56D40F531E55AB6D006581AC /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 56D40F521E55AB6D006581AC /* libsqlite3.0.tbd */; };
-		56D40F551E55B00B006581AC /* iOS的数据库技术的实现.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 56D40F541E55B00B006581AC /* iOS的数据库技术的实现.rtf */; };
+		56D40F571E55B118006581AC /* iOS的数据库技术的实现.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 56D40F561E55B118006581AC /* iOS的数据库技术的实现.rtf */; };
 		56F45DD61E55AAFF000C81F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56F45DD51E55AAFF000C81F6 /* main.m */; };
 		56F45DD91E55AAFF000C81F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56F45DD81E55AAFF000C81F6 /* AppDelegate.m */; };
 		56F45DDC1E55AAFF000C81F6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56F45DDB1E55AAFF000C81F6 /* ViewController.m */; };
@@ -20,7 +20,7 @@
 
 /* Begin PBXFileReference section */
 		56D40F521E55AB6D006581AC /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
-		56D40F541E55B00B006581AC /* iOS的数据库技术的实现.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; name = "iOS的数据库技术的实现.rtf"; path = "../../../../iOS的数据库技术的实现.rtf"; sourceTree = "<group>"; };
+		56D40F561E55B118006581AC /* iOS的数据库技术的实现.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "iOS的数据库技术的实现.rtf"; sourceTree = "<group>"; };
 		56F45DD11E55AAFF000C81F6 /* SqliteDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SqliteDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56F45DD51E55AAFF000C81F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		56F45DD71E55AAFF000C81F6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -74,7 +74,7 @@
 		56F45DD31E55AAFF000C81F6 /* SqliteDemo */ = {
 			isa = PBXGroup;
 			children = (
-				56D40F541E55B00B006581AC /* iOS的数据库技术的实现.rtf */,
+				56D40F561E55B118006581AC /* iOS的数据库技术的实现.rtf */,
 				56F45DD71E55AAFF000C81F6 /* AppDelegate.h */,
 				56F45DD81E55AAFF000C81F6 /* AppDelegate.m */,
 				56F45DDA1E55AAFF000C81F6 /* ViewController.h */,
@@ -159,7 +159,7 @@
 				56F45DE71E55AAFF000C81F6 /* LaunchScreen.storyboard in Resources */,
 				56F45DE41E55AAFF000C81F6 /* Assets.xcassets in Resources */,
 				56F45DDF1E55AAFF000C81F6 /* Main.storyboard in Resources */,
-				56D40F551E55B00B006581AC /* iOS的数据库技术的实现.rtf in Resources */,
+				56D40F571E55B118006581AC /* iOS的数据库技术的实现.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
