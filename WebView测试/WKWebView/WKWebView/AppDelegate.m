@@ -22,8 +22,8 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
-//    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[WKWebViewViewController new]];
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[UIWebViewViewController new]];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[WKWebViewViewController new]];
+//    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[UIWebViewViewController new]];
     [self.window makeKeyAndVisible];
     return YES;
 }

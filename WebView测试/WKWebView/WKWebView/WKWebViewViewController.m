@@ -11,7 +11,7 @@
 #import "WKWebViewViewController.h"
 #import <WebKit/WebKit.h>
 
-@interface WKWebViewViewController ()<WKNavigationDelegate>
+@interface WKWebViewViewController ()<WKNavigationDelegate, WKUIDelegate>
 
 @property (nonatomic, strong) WKWebView *mWKWebView;
 
@@ -51,21 +51,48 @@
         NSLog(@"protocolHead=%@",protocolHead);
     }
     decisionHandler(WKNavigationActionPolicyAllow);
+    
 }
 
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation{
+
+    NSString *jscmd = [NSString stringWithFormat:@"alert()"];
+    [webView evaluateJavaScript:jscmd completionHandler:^(id _Nullable response, NSError * _Nullable error) {
+        
+        NSLog(@"show alert");
+    }];
+}
+
+- (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(nonnull NSString *)message initiatedByFrame:(nonnull WKFrameInfo *)frame completionHandler:(nonnull void (^)(void))completionHandler{
+
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"123456" message:message preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        completionHandler();
+    }]];
+    
+    [self.navigationController presentViewController:alert animated:YES completion:nil];
+
+//    completionHandler();
+    
+}
 #pragma mark Setter && Getter
 /**
  1.创建webview，并设置大小，"20"为状态栏高度
  2.创建请求
  3.加载网页
  */
-- (WKWebView *)mUIWebView{
+- (WKWebView *)mWKWebView{
     
     if (_mWKWebView == nil) {
         
-        _mWKWebView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.cnblogs.com/mddblog/"] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:15];
+        WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
+        _mWKWebView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) configuration:config];
+//        _mWKWebView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.baidu.com"] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:15];
         _mWKWebView.navigationDelegate = self;
+        _mWKWebView.UIDelegate = self;
         [_mWKWebView loadRequest:request];
     }
     return _mWKWebView;

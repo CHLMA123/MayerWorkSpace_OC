@@ -118,7 +118,7 @@
 				TargetAttributes = {
 					36B8FB281E24857100EF8756 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = U9UA74RVD8;
+						DevelopmentTeam = 75V6ZM52RS;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -281,14 +281,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = U9UA74RVD8;
+				DEVELOPMENT_TEAM = 75V6ZM52RS;
 				INFOPLIST_FILE = WKWebView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Mayer.WKWebView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4ee9a778-abbe-4aeb-95b5-05c39f039ea9";
-				PROVISIONING_PROFILE_SPECIFIER = UniversalFoscam_Dev;
+				PROVISIONING_PROFILE = "6cc768b1-40c7-4152-ac08-0395af3fa4c1";
+				PROVISIONING_PROFILE_SPECIFIER = Special_Dev;
 			};
 			name = Debug;
 		};
@@ -297,14 +297,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = U9UA74RVD8;
+				DEVELOPMENT_TEAM = 75V6ZM52RS;
 				INFOPLIST_FILE = WKWebView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Mayer.WKWebView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7a8e0ef3-eac0-4ab5-9a95-47e9f2eaa61c";
-				PROVISIONING_PROFILE_SPECIFIER = UniversalFoscam_AdHoc;
+				PROVISIONING_PROFILE = "9eb29c2b-c85f-4123-9ae0-7901499591a5";
+				PROVISIONING_PROFILE_SPECIFIER = Special_AdHoc;
 			};
 			name = Release;
 		};
@@ -327,6 +327,7 @@
 				36B8FB451E24857100EF8756 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
